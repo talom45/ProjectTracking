@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<!--this is my menu hover-->
+    <section id="sidebar"> <!--ID sidebar for it being the unique section that has grouped everything in the sidebar-->
+        <h1 id="menu-label" >MENU
+        </h1>
+        <input type="checkbox" id="menuicon"> <div class="toggle">
+            <span class="top-line common"></span>
+            <span class="middle-line common"></span>
+            <span class="bottom-line common"></span>
+        </div>
+         <!--Id-ing the menu buttom for easy sytling-->
+        <div class="menu-top"><!--top because it will be shown at the top f the hover-->
+            <form id="form">
+                <input type="search" placeholder="Search" id="searchbar"><!--a search bar in the menu hover-->
+            </form>
+
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Overview</span><!--using span so that they may be in line with the icons-->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Chats</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i><!--Replace i with the icon from web-->
+                    <span class="text">Progress</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Files</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Whiteboard</span>
+                </a>
+            </li>
+        </ul>
+        </div><!--I'm using div to group the elements in different groups the top with the top and the bottom with the bottom-->
+        <div class="menu-middle"><!--middle because it will be shown at the middle of the hover-->
+        <ul>
+            <label for="task" id="taskslabel">TASKS</label>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Upcoming</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Today</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="brand"></i>
+                    <span class="text">sticky Wall</span>
+                </a>
+            </li>
+        </ul>
+        </div>
+        <div class="menu-buttom">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="brand"></i>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="brand"></i>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+                </ul>
+        </div>
+    </section>  
+<!--this is my menu hover-->  
+        <!--<header>
+            <div class="profile-container">
+                <div class="image"><input type="file" style="display: none;" id="imageup-load" accept="image/*">
+                    <img src="" alt="profile-pic"><!--Option to select image->
+                </div>
+                <div class="userdetails">
+                    <h6><span>[Username]</span></h6>
+                    <h6><span>[RegNumber]</span></h6><!--Making the size small for better view->
+                    <h6><span>[Role]</span></h6>
+                </div>
+            </div>
+        </header>-->
+
+
+   <script src="script.js" ></script>
+</body>
+</html>
