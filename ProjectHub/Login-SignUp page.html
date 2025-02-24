@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css"> <!--Im using 1 css file for all the html pages this will reduce the time taken to load the pages.-->
+</head>
+<body class="myloginform"> <!--using the id to identify this body so that i can use 1 css file. By using id i can swiftly style this body without it affecting the other pages-->
+    <header id="loginheader">
+        <h2 class="logo"></h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnlogin-popup">Login</button>
+        </nav>
+    </header>
+    <h1 class="typewriter"> Welcome!</h1>
+<div class="wrapper">
+    <span class="icon-close">x</span>
+    <div class="form-box login" >
+        <h2>Login</h2>
+        <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+            <div class="input-box">
+                <span class="icon"><!--insert an icon here
+                    an email icon 
+                --></span>
+                <input type="email"  th:field="*{email}" required>
+                <label>Email</label>
+            </div> 
+            <div class="input-box">
+                <span class="icon">p<!--insert an icon here
+                    a lock icon 
+                --></span>
+                <input type="password" th:field="*{password}" required>
+                <label>Password</label>
+            </div>
+            <div class="remeber-forget">
+                <label> <input type="checkbox">
+                Remember me </label>
+                <a href="#">Forgot password?</a>
+            </div>
+                <button type="submit" class="btn">Sign in</button>
+            <div class="login-sign-up">
+                <p>Don't have an account? <a href="#" class="registeration-link">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div class="form-box sign-up" >
+        <h2>Registration</h2>
+        <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+            <div class="input-box">
+                <span class="icon"><!--insert an icon here
+                    a person icon--></span>
+                <input type="text" id="regNumber" name="regNumber" pattern="[A-Z]{1}[0-9]{6}[A-Z]{1}" 
+                minlength="8" maxlength="8" required placeholder="H190000K" th:field="*{regNumber}">
+                <label>Registration Number</label>
+            </div> 
+            <div class="input-box">
+                <span class="icon"><!--insert an icon here
+                    a person icon--></span>
+                <input type="text" th:field="*{username}"  required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><!--insert an icon here
+                    a email icon--></span>
+                <input type="email" th:field="*{email}"  required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><!--insert an icon here
+                    a password icon--></span>
+                <input type="password" th:field="*{password}" required>
+                <label>Password</label>
+            </div>
+            <div class="remeber-forget">
+                <label> <input type="checkbox">
+                agree to terms & conditions</label>
+            </div>
+                <button type="submit" class="btn">Next</button>
+            <div class="login-sign-up">
+                <p>Already have an account? <a href="#" class="login-link">Login</a>
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+   <script src="script.js" ></script>
+</body>
+</html>      

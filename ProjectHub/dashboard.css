@@ -1,0 +1,598 @@
+/*css for the whole body*/
+*{
+    margin:0;
+    padding: 1px;
+    box-sizing: border-box;
+    font-family:Poppins,sans-serif;
+}
+/*This css is for the login/signup form*/
+body.myloginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0c6ab;
+    /*background: url(leaves-rain-9537645.jpg) no-repeat;*/
+    background-size: cover;  
+}
+header#loginheader{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 10px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+header#loginheader h2.logo{
+    user-select: none;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: url(floowe.jpg);
+}
+header#loginheader .navigation a{
+    position:relative;
+    font-size: 1.1em;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    cursor:pointer;
+    user-select: none;
+}
+header#loginheader .navigation a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width:100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transform: transform .5s;
+ }
+ header#loginheader .navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+
+ }
+header#loginheader .navigation .btnlogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:#fff;
+    font-weight: 500;
+    margin-left: 32px;
+    transition: .5s; 
+}
+header#loginheader .navigation .btnlogin-popup:hover{
+    background: #fff;
+    color:#162938;
+
+  }
+h1.typewriter{
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.1em;
+    font-size: 8em;
+    padding-top: 180px;
+    background: transparent;
+    font-weight: 500;
+    color: black;
+    animation: typewriter 2s steps(50) 0.5s forwards;
+    user-select: none;
+}
+@keyframes typewriter{
+    0%{
+        width: 0;
+        margin-left: 100%;
+    }
+    100%{
+        width: 100%;
+        margin-left: 48%;
+        transform:translateX(-50%)
+    }
+}
+div.wrapper{
+    position: absolute;
+    width: 420px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    bottom: 0;
+    margin-bottom: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display:flex;
+    float: inline-start;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    transform: scale(0);
+    transition: transform .5s ease,height .2s ease;
+ }
+ div.wrapper.active-popup{
+    transform: scale(1);
+ }
+ div.wrapper.active{
+    height: 510px;
+ }
+ div.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    pointer-events: auto;
+ }
+ div.wrapper .form-box{
+    width: 100%;
+    padding: 15px;
+ }
+ div.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+ }
+ div.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+ }
+ div.wrapper .form-box.sign-up{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+ }
+ div.wrapper.active .form-box.sign-up{
+    transition: transform .18s ease;
+    transform: translateX(0);
+ }
+ div.wrapper .form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+ }
+ div.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+ }
+ div.wrapper .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-40%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+ }
+ div.wrapper .input-box input:focus~label,
+ div.wrapper .input-box input:valid~label {
+   top: -5px;
+}
+ div.wrapper .input-box input:focus,
+ div.wrapper .input-box input:valid{
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+ div.wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+ }
+ div.wrapper .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+ }
+ div.wrapper .remeber-forget{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between; 
+ }
+ div.wrapper .remeber-forget label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+div.wrapper .remeber-forget a{
+    color: #131a20;
+    text-decoration: none;
+}
+div.wrapper .remeber-forget a:hover{
+    text-decoration: underline;
+}
+div.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+div.wrapper .login-sign-up{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+div.wrapper .login-sign-up p a{
+    color: #131a20;
+    text-decoration: none;
+    font-weight: 600;
+}
+div.wrapper .login-sign-up p a:hover {
+    text-decoration: underline;
+}
+
+/*css code for the login/signup form ends here*/
+
+
+
+
+
+
+
+
+
+
+/* css code for dashboard starts here*/
+
+
+body.allpages{
+    background-color: #ede7e7;
+}
+div.nav-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/*css for the top-nav container*/
+div.nav-container .top-nav{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 50px;
+    width:100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+    padding-right: 20px;
+}
+div.top-nav .appname{
+    display:flex;
+    align-items: center;
+    color: #011534da;
+    user-select: none;
+}
+div.top-nav .appname .chckbx{
+    position: absolute;
+    padding-right: 5px;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    top:10px;
+    z-index: 1;
+    cursor: pointer; 
+    border-radius: 2px;
+}
+div.top-nav .appname .chckbx #menuicon{
+    opacity: 0;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+div.top-nav .appname .chckbx .common{
+    position:absolute;
+    height:2px;
+    width:20px;
+    background-color: #011534da;
+    border-radius: 50px;
+    transition: 0.3 ease;
+    cursor: pointer;
+}
+div.top-nav .appname .chckbx .top-line{
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+div.top-nav .appname .chckbx .middle-line{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+div.top-nav .appname .chckbx .bottom-line{
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+div.top-nav .appname #menu-label{
+    margin-left: 46px;
+}
+
+/*code for the sidebar-contaner*/
+div.nav-container .sidebar-container{
+    position: fixed;
+    margin-top: 50px;/*this is removing 50px from the upper part that is already covered by the top-nav*/
+    top:0;/*it removes the space between the top-nav and the sidebar*/
+    left:0;
+    width:250px;
+    height:calc(100vh - 50px) ;
+    background-color: #fff;
+    transition: 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+div.nav-container .sidebar-container.hide{
+    width: 50px;/*Width when collapsed*/
+}
+.sidebar-container.hide .text{
+    display:none;
+}
+div.nav-container .sidebar-container li.active{
+    background: #000000;
+    position: relative;
+}
+div.nav-container .sidebar-container li.active a{
+    color: aliceblue;
+}
+div.nav-container .sidebar-container li.active::before,
+div.nav-container .sidebar-container li.active::after{
+    content:'';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top:-40px;
+    right:0;
+    box-shadow: 20px 20px 0 gray;
+    z-index: -1;
+}
+div.nav-container .sidebar-container ul{
+    list-style: none;
+}
+div.nav-container .sidebar-container ul li a {
+    color: #011a41b9;
+    font-weight: 500;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    text-emphasis: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+div.nav-container .sidebar-container.hide li.active a{
+    color: aliceblue;
+}
+div.nav-container .sidebar-container.hide li a{
+    transition: width .3s ease;
+}
+div.nav-container .sidebar-container ul li:hover a{
+    color:aliceblue;
+    background-color: rgba(1, 26, 65, 0.796);
+}
+.fa{
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*this is css for the top part of the sidebar*/
+div.nav-container .sidebar-container .searchcontainer{
+    background-color: #ede7e7;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    padding-bottom: 3px;
+    font-size: 18px;
+    border: 1px;
+    margin-left: 0;
+    margin-top: 2px;
+    height:40px;
+}div.nav-container .sidebar-container .searchcontainer:hover{
+    background-color: #fff;
+    box-shadow:0 0 2px rgba(9, 9, 9, 0.616);
+}
+div.nav-container .sidebar-container form #searchbar{
+    background-color: transparent;
+    width:100%;
+    height: 38px;
+    align-items: center;
+    left:0;
+    padding-left: 30px;
+    padding-bottom: 3px;
+    font-size: 18px;
+    border: 1px;
+}
+div.nav-container .sidebar-container .searchcontainer .fa{
+    width:30px;
+    position: absolute;
+    background-color: transparent;
+}
+.sidebar-container .searchcontainer .mic{
+    height: 38px;
+    min-width: 30px;
+    outline: none;
+    border: none;
+    margin-left: 0px;
+    align-items: center;
+    display: absolute;
+    justify-content: center;
+    background-color: transparent;
+}
+div.nav-container .sidebar-container .sidebartop ul{
+    margin-top: 10px;
+}
+hr{
+    background-color: #ede7e7;
+    border: 1px solid #ede7e7;
+}
+div.sidebar-container .sidebartop #taskslabel{
+    font-size: smaller;
+    color: rgba(23, 25, 27, 0.831);
+    text-align:left;
+    padding: 10px 0;
+    padding-left: 60px;
+    pointer-events: none;
+}
+div.nav-container .sidebar-container .sidebartop {
+    margin-top: 5px;
+}
+
+/*this css is for the bottom part of the sidebar-container*/
+div.sidebar-container .sidebar-bottom{
+    padding-top: 80px;
+    font-size:smaller;
+}
+div.sidebar-container .sidebar-bottom li a.logout{
+    color: #eb5959;
+}
+
+/*code for the main section of the dashboard*/
+main ul{
+    list-style: none;
+}
+main.mainbody-container{
+    position: relative;
+    height: 100%;
+    margin-top: 50px;;/*same height as the top-nav*/
+    margin-left: 260px;/*same height as the sidebar-container*/
+    padding: 10px 12px;
+    border-radius: 5px;
+    right: 0;
+    font-family: sans-serif;
+}
+main.mainbody-container .head-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    flex-wrap: wrap;
+}
+main.mainbody-container .head-title .left h1{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color:#000000;
+}
+main.mainbody-container .head-title .left .breadcrumb{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+}
+main.mainbody-container .head-title .left .breadcrumb li{
+    color:#000000;
+}
+main.mainbody-container .head-title .left .breadcrumb li a{
+    color: rgb(75, 72, 72);
+    pointer-events: unset;
+    text-decoration: none;
+}
+main.mainbody-container .head-title .left .breadcrumb li a.active{
+    color:blue ;
+}
+main.mainbody-container .head-title .right .btn-download{
+    height:36px;
+    padding: 0 16px;
+    border-radius: 36px;
+    background:#23527c;
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    font-weight: 500;
+}
+main.mainbody-container .box-info{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:24px;
+    margin-top: 20px;
+}
+main.mainbody-container .box-info li{
+    padding: 18px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap:14px;
+
+}
+main.mainbody-container .box-info li .fa{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: gray;
+    font-size: 26px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+main.mainbody-container .box-info li:nth-child(1) .fa{
+background-color: lightblue;
+color: blue;
+}
+main.mainbody-container .box-info li:nth-child(2) .fa{
+    background-color: rgb(235, 160, 95);
+    color: orange;
+}
+/*End of main page*/
+
+
+
+
+@media screen and (max-width:768px) {
+    #content{
+        width:100%;
+        margin-left: 0;
+    } 
+}
+
+@media screen and (max-width:576px) {
+    
+}
