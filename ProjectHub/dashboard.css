@@ -10,8 +10,7 @@ body.myloginform{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0c6ab;
-    /*background: url(leaves-rain-9537645.jpg) no-repeat;*/
+    background: url(leaves-rain-9537645.jpg) no-repeat;
     background-size: cover;  
 }
 header#loginheader{
@@ -282,14 +281,11 @@ div.wrapper .login-sign-up p a:hover {
 
 body.allpages{
     background-color: #ede7e7;
-}
-div.nav-container{
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 /*css for the top-nav container*/
-div.nav-container .top-nav{
+.top-nav{
     position: fixed;
     top:0;
     left:0;
@@ -353,35 +349,73 @@ div.top-nav .appname .chckbx .bottom-line{
 div.top-nav .appname #menu-label{
     margin-left: 46px;
 }
-
+div.profilecontainer{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
+div.profilecontainer .details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #011a41b9;
+}
+div.profilecontainer #myprofile{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+div.profilecontainer .details h6{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    margin: 0;
+    padding-right: 25px;
+}
+div.profilecontainer .notifications{
+    position: fixed;
+    top:3px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 10px;
+    color: #162938;
+    text-decoration: none;
+}
 /*code for the sidebar-contaner*/
-div.nav-container .sidebar-container{
+.sidebar-container{
     position: fixed;
     margin-top: 50px;/*this is removing 50px from the upper part that is already covered by the top-nav*/
     top:0;/*it removes the space between the top-nav and the sidebar*/
     left:0;
+    z-index: 1000;
     width:250px;
-    height:calc(100vh - 50px) ;
+    height:calc(100% - 50px) ;
     background-color: #fff;
     transition: 0.3s ease;
-    overflow-x: hidden;
     overflow-y: scroll;
 }
-div.nav-container .sidebar-container.hide{
+.sidebar-container.hide{
     width: 50px;/*Width when collapsed*/
 }
 .sidebar-container.hide .text{
     display:none;
 }
-div.nav-container .sidebar-container li.active{
+.sidebar-container li.active{
     background: #000000;
     position: relative;
 }
-div.nav-container .sidebar-container li.active a{
+.sidebar-container li.active a{
     color: aliceblue;
 }
-div.nav-container .sidebar-container li.active::before,
-div.nav-container .sidebar-container li.active::after{
+.sidebar-container li.active::before,
+.sidebar-container li.active::after{
     content:'';
     position: absolute;
     width: 40px;
@@ -392,26 +426,26 @@ div.nav-container .sidebar-container li.active::after{
     box-shadow: 20px 20px 0 gray;
     z-index: -1;
 }
-div.nav-container .sidebar-container ul{
+.sidebar-container ul{
     list-style: none;
 }
-div.nav-container .sidebar-container ul li a {
+.sidebar-container ul li a {
     color: #011a41b9;
     font-weight: 500;
-    padding: 5px 5px;
+    padding: 3px 2px;
     display: flex;
     align-items: center;
     text-emphasis: none;
     text-decoration: none;
     white-space: nowrap;
 }
-div.nav-container .sidebar-container.hide li.active a{
+.sidebar-container.hide li.active a{
     color: aliceblue;
 }
-div.nav-container .sidebar-container.hide li a{
+.sidebar-container.hide li a{
     transition: width .3s ease;
 }
-div.nav-container .sidebar-container ul li:hover a{
+.sidebar-container ul li:hover a{
     color:aliceblue;
     background-color: rgba(1, 26, 65, 0.796);
 }
@@ -421,9 +455,22 @@ div.nav-container .sidebar-container ul li:hover a{
     align-items: center;
     justify-content: center;
 }
-
+/*scrollbar*/
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-track{
+    background: none;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#c6cadd;
+}
 /*this is css for the top part of the sidebar*/
-div.nav-container .sidebar-container .searchcontainer{
+.sidebar-container .searchcontainer{
     background-color: #ede7e7;
     border-radius: 5px;
     display:flex;
@@ -434,11 +481,12 @@ div.nav-container .sidebar-container .searchcontainer{
     margin-left: 0;
     margin-top: 2px;
     height:40px;
-}div.nav-container .sidebar-container .searchcontainer:hover{
+}
+.sidebar-container .searchcontainer:hover{
     background-color: #fff;
     box-shadow:0 0 2px rgba(9, 9, 9, 0.616);
 }
-div.nav-container .sidebar-container form #searchbar{
+.sidebar-container form #searchbar{
     background-color: transparent;
     width:100%;
     height: 38px;
@@ -449,30 +497,17 @@ div.nav-container .sidebar-container form #searchbar{
     font-size: 18px;
     border: 1px;
 }
-div.nav-container .sidebar-container .searchcontainer .fa{
+.sidebar-container .searchcontainer .fa{
     width:30px;
+    height: 38px;
     position: absolute;
     background-color: transparent;
-}
-.sidebar-container .searchcontainer .mic{
-    height: 38px;
-    min-width: 30px;
-    outline: none;
-    border: none;
-    margin-left: 0px;
-    align-items: center;
-    display: absolute;
-    justify-content: center;
-    background-color: transparent;
-}
-div.nav-container .sidebar-container .sidebartop ul{
-    margin-top: 10px;
 }
 hr{
     background-color: #ede7e7;
     border: 1px solid #ede7e7;
 }
-div.sidebar-container .sidebartop #taskslabel{
+.sidebartop #taskslabel{
     font-size: smaller;
     color: rgba(23, 25, 27, 0.831);
     text-align:left;
@@ -480,10 +515,16 @@ div.sidebar-container .sidebartop #taskslabel{
     padding-left: 60px;
     pointer-events: none;
 }
-div.nav-container .sidebar-container .sidebartop {
+.sidebar-container .sidebartop {
     margin-top: 5px;
 }
-
+.sidebar-container ul .fa{
+    margin-left: 0;
+    width: 30px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: 10px;
+}
 /*this css is for the bottom part of the sidebar-container*/
 div.sidebar-container .sidebar-bottom{
     padding-top: 80px;
@@ -492,18 +533,29 @@ div.sidebar-container .sidebar-bottom{
 div.sidebar-container .sidebar-bottom li a.logout{
     color: #eb5959;
 }
+@media screen and (max-width:768px) {
+    #content{
+        width:100%;
+        margin-left: 0;
+    } 
+}
+
+@media screen and (max-width:576px) {
+    
+}
 
 /*code for the main section of the dashboard*/
 main ul{
     list-style: none;
 }
 main.mainbody-container{
-    position: relative;
+    position:relative;
     height: 100%;
-    margin-top: 50px;;/*same height as the top-nav*/
-    margin-left: 260px;/*same height as the sidebar-container*/
+    margin-top: 50px;/*same height as the top-nav*/
+    margin-left: 250px;/*same height as the sidebar-container*/
     padding: 10px 12px;
     border-radius: 5px;
+    transition: .3s ease;
     right: 0;
     font-family: sans-serif;
 }
@@ -582,17 +634,3 @@ main.mainbody-container .box-info li:nth-child(2) .fa{
     color: orange;
 }
 /*End of main page*/
-
-
-
-
-@media screen and (max-width:768px) {
-    #content{
-        width:100%;
-        margin-left: 0;
-    } 
-}
-
-@media screen and (max-width:576px) {
-    
-}

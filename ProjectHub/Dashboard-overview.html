@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body class="allpages">
     <!--html for the top navigation starts here-->
-    <div class="nav-container"><!--container for both the side navigationbar ad the top natigation bar-->
-        <div class="top-nav"><!--in the top nav I have inserted a division for the profile. It contains the profile details and the bar to instert the profile picture-->
+        <div class="top-nav">
             <div class="appname">
                 <div class="chckbx">
                     <input type="checkbox" id="menuicon"> <div>
                     <span class="top-line common"></span>
-                    <span class="middle-line common"></span><!--using a checkbox instead of an icon for animation effects-->
-                    <span class="bottom-line common"></div>
+                    <span class="middle-line common"></span><!--using a checkbox instead of an icon-->
+                    <span class="bottom-line common"></span></div>
                 </div>
-                </span><!--i inserted the toggle before the webname such that when i expand the sidebarit absorbs the webname and shows menu instead-->
-                <h3 id="menu-label" >MENU</h1><!--these 2 will inter exchange as i open and close the sidebar-->
-                <!--the app name-->
+                <h3 id="menu-label" >MENU</h3><!--With the help of JS the Menu label will interexchange with the Appname-->
             </div>
-            <div class="profilecontainer"><!--I shall divide this div into 4 sections-->
-                <div class="progile-circle">
-                    <!--profile circle here-->
-                </div>
-                <div class="details">
-                    <!--User details here-->
-                </div>
-            </div>
-            <div class="notifications">
-                <!--notification format here-->
+            <div class="profilecontainer">
+                <a href="Settings.html" class="details">
+                    <img src="bag.jpg" alt="Profile" id="myprofile">
+                    <div>
+                        <h6>Username</h6>
+                        <h6>Regnumber</h6>
+                    </div>
+                </a>
+                <a href="#" class="notifications">
+                    <i class="fa"></i>
+                </a>
             </div>
         </div>
         <!--code for topnav ends here...-->
@@ -45,7 +42,6 @@
                     <form action="" id="seacrchform">
                         <input type="search" placeholder="Search" id="searchbar">
                     </form>
-                <button class="mic"><i class='fa bx-chervron-right'></i></button>
                 </div>
                 <!--A list for links to other pages of this website-->
                 <ul>
@@ -76,6 +72,7 @@
                     </li>
                     <hr>
                     <label for="task" id="taskslabel">TASKS</label>
+                    <br>
                     <li><a href="StickyWall.html">
                         <i class="fa"></i>
                         <span class="text">Sticky Notes</span>
@@ -115,57 +112,55 @@
                 </ul>
             </div>
         </div>
-    </div>
 
     <!--the html for the main elements begin here-->
     <main class="mainbody-container">
-        <div class="main-top">
-            <div class="head-title">
-                <div class="left">
-                    <h1>Dashboard</h1>
-                        <ul class="breadcrumb">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><i class='fa bx-chervron-right'></i></li>
-                            <li><a class="active" href="#">Home</a></li>
-                        </ul>
-                </div>
-                <div class="right">
-                    <a href="Library.html" class="btn-download">
-                        <i class='fa bxs-cloud-download'></i>
-                        <span class="text">Download Files</span>
-                    </a>
-                </div>
+    <div class="main-top">
+        <div class="head-title">
+            <div class="left">
+                <h1>Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li><i class='fa bx-chervron-right'></i></li>
+                        <li><a class="active" href="Dashboard-overview.html">Home</a></li>
+                    </ul>
             </div>
-            <div class="info">
-                <ul class="box-info">
-                    <li>
-                        <i class='fa bxs-calendar-check'></i>
-                        <span class="text">
-                            <h3>Calendar </h3>
-                            <p>NO TASK TODAY</p>
-                            <p>1 Task tomorrow</p>
-                        </span>
-                    </li>
-                    <li>
-                        <i class='fa bxs-calendar-check'></i>
-                        <span class="text">
-                            <h3> Drafts </h3>
-                            <p>We are going to launch the proj...[yes 07.25pm]</p>
-                            <p>the structure of our project is... [29/01/25]</p>
-                        </span>
-                    </li>
-                </ul> 
+            <div class="right">
+                <a href="Library.html" class="btn-download">
+                    <i class='fa-cloud-download'></i>
+                    <span class="text">Download Files</span>
+                </a>
             </div>
         </div>
-        <div class="main-bottom">
-            <div class="progresslink">
+        <div class="info">
+            <ul class="box-info">
                 <li>
+                    <i class='fa bxs-calendar-check'></i>
                     <span class="text">
-                        <h3>P</h3>
+                        <h3>Calendar </h3>
+                        <p>NO TASK TODAY</p>
+                        <p>1 Task tomorrow</p>
                     </span>
                 </li>
-            </div>
+                <li>
+                    <i class='fa bxs-calendar-check'></i>
+                    <span class="text">
+                        <h3> Drafts </h3>
+                        <p>We are going to launch the proj...[yes 07.25pm]</p>
+                        <p>the structure of our project is... [29/01/25]</p>
+                    </span>
+                </li>
+            </ul> 
         </div>
+    </div>
+    <div class="main-bottom">
+        <div class="progresslink">
+            <li>
+                <span class="text">
+                    <h3>P</h3>
+                </span>
+            </li>
+        </div>
+    </div>
     </main>
     <script src="script-dashboard.js"></script>
 </body>

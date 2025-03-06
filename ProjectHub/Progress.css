@@ -1,0 +1,98 @@
+/*Progress*/
+body.myloginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7; 
+}
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    width:100%;
+    height: 30px;
+    background-color: #fff;
+    padding: 10px 8px;
+    display: flex;
+    gap:80px;
+    align-items: center;
+    z-index: 99;
+}
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-track{
+    background: none;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#c6cadd;
+}
+nav a{
+    position: relative;
+    font-size: 1.1em;
+    color:#000;
+    text-decoration: none;
+    justify-content: space-between;
+    font-weight: 500;
+    cursor:pointer;
+    user-select: none;
+}
+.progress-summary {
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #4caf50; /* Green color for progress */
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease; /* Animated progress */
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-item i {
+    margin-right: 10px;
+    color: #4caf50; /* Color for icons */
+}
+.status {
+    margin-left: auto; /* Align status to the right */
+    font-weight: bold;
+}
+canvas {
+    margin-top: 20px;
+    max-width: 100%;
+}
+h1{
+    margin-top: 50px;
+}
