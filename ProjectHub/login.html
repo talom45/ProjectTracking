@@ -1,0 +1,168 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body{
+    background: #2e2e2d;
+}
+.container {
+  max-width: 350px;
+  background: transparent;
+  border-radius: 20px;
+  padding: 25px 35px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(16, 137, 211);
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.form .input {
+  width: 90%;
+  background: rgb(211, 208, 208);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: #cff0ff 0px 5px 10px -5px;
+  border-inline: 2px solid transparent;
+}
+
+.form-row{
+    margin-top: 15px;
+}
+.form-row select {
+    width: 60%;
+  background: transparent;
+  border: 2px;
+  border-color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 20%;
+}
+
+.form .input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.form .input::placeholder {
+  color: rgb(119, 119, 119);
+}
+
+.form .input:focus {
+  outline: none;
+  border-inline: 4px solid #12b1d1;
+}
+
+.form .forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 30%;
+}
+
+.form .forgot-password a {
+  font-size: 14px;
+  color: #0099ff;
+  text-decoration: none;
+  margin-left: 10%;
+  transition: .5s;
+}
+.form .forgot-password a:hover {
+    color: #b2b3b4;
+  }
+  .link{
+    align-content: center;
+    margin-left: 10%;
+  }
+.link p {
+    font-size: 14px;
+    color: #0099ff;
+    text-decoration: none;
+    margin-left: 10%;
+  }
+  .link a {
+    font-size: 14px;
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: .5s;
+  }
+  .link a:hover {
+    color: #b2b3b4;
+    text-decoration: dotted;
+  }
+  
+.form .login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form .login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.form .login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+.agreement {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.agreement a {
+  text-decoration: none;
+  color: #0099ff;
+  font-size: 9px;
+}
+  </style>
+ </head>
+ <body> 
+  <div class="container">
+    <div class="heading">Welcome to ProjectHub</div>
+    <form class="form" action="">
+        <div class="form-row">
+            <select name="role">
+                <option value="student">Student</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+      <input placeholder="Email" id="email" name="email" type="email" class="input" required="" />
+      <input placeholder="Password" id="password" name="password" type="password" class="input" required=""/>
+      <span class="forgot-password"><a href="forgotpassword.html">Forgot Password ?</a></span>
+      <input value="Sign In" type="submit" class="login-button" />
+      <div class="link">
+        <p>Are you a new User? <a href="registration.html" class="signin_link">Create Account</a></p>
+    </div>
+    </form> 
+ </body>
+ </html>
